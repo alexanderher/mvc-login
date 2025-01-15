@@ -1,0 +1,18 @@
+# Configuración para okta cuando el perfil "okta" está activo
+spring:
+  profile: prod
+security:
+  oauth2:
+    client:
+      registration:
+        client-id: hUpgO8Mey4KgnNBs62zeheVx2a9iJ4eQ
+        token-uri: https://dev-tsn11j37ouni3l4r.us.auth0.com/oauth/token
+        client-secret: oJ8pCnSrtrSjon8F_Yl4BRtOFrQzXhWAMZaDYM-n3eNPQzp4MvxAcqLSlogRfHwF
+        redirect-uri: /login/oauth2/code/okta
+        client-name: okta
+        jwt-set-uri: https://dev-tsn11j37ouni3l4r.us.auth0.com/.well-known/jwks.json
+        user-info: https://dev-tsn11j37ouni3l4r.us.auth0.com/oauth/userinfo
+        logout: https://dev-tsn11j37ouni3l4r.us.auth0.com/v2/logout
+        attribute-name: sub
+    provider:
+      issuer-uri: https://dev-tsn11j37ouni3l4r.us.auth0.com/authorize

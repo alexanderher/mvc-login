@@ -1,0 +1,18 @@
+# Configuración para Keycloak cuando el perfil "keycloak" está activo
+spring:
+  profile: dev
+security:
+  oauth2:
+    client:
+      registration:
+        client-id: hUpgO8Mey4KgnNBs62zeheVx2a9iJ4eQ
+        token-uri: http://localhost:8080/realms/ciam/protocol/openid-connect/token
+        client-secret: v4XTbN6CxiNbVLvICmHqRQpgih2mej6p
+        redirect-uri: /login/oauth2/code/keycloak
+        client-name: ciam
+        jwt-set-uri: http://localhost:8080/realms/ciam/protocol/openid-connect/certs
+        user-info: http://localhost:8080/realms/ciam/protocol/openid-connect/userinfo
+        logout: http://localhost:8080/realms/ciam/protocol/openid-connect/logout
+        attribute-name: preferred_username
+    provider:
+      issuer-uri: http://localhost:8080/realms/ciam/protocol/openid-connect/auth
